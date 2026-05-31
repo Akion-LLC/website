@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akion - Policy Intelligence Infrastructure</title>
-    <meta name="description" content="Akion builds structured policy data infrastructure for legislators, activists, and lobbyists. Codex automates legislative reference tracking. Sentinel monitors bills with precision filter rules.">
+    <meta name="description" content="Akion builds structured policy data infrastructure for legislators, activists, and lobbyists. Codex automates legislative reference tracking. PolicyUnboxed monitors bills with precision filter rules.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
@@ -443,8 +443,8 @@
             justify-content: center;
         }
 
-        /* Sentinel reverses the visual to the left */
-        .sentinel-block .product-visual {
+        /* PolicyUnboxed reverses the visual to the left */
+        .policyunboxed-block .product-visual {
             border-left: none;
             border-right: 1px solid var(--border);
             order: -1;
@@ -462,7 +462,7 @@
         }
 
         .codex-block .product-tag    { border-color: var(--gold-dim);  color: var(--gold); }
-        .sentinel-block .product-tag { border-color: var(--slate-dim); color: var(--slate-light); }
+        .policyunboxed-block .product-tag { border-color: var(--slate-dim); color: var(--slate-light); }
 
         .product-name {
             font-family: 'Cormorant Garamond', serif;
@@ -513,7 +513,7 @@
         }
 
         .codex-block    .product-features li::before { color: var(--gold); }
-        .sentinel-block .product-features li::before { color: var(--slate-light); }
+        .policyunboxed-block .product-features li::before { color: var(--slate-light); }
 
         .btn-codex {
             padding: 0.75rem 1.75rem;
@@ -530,7 +530,7 @@
 
         .btn-codex:hover { background: var(--gold); color: #080600; border-color: var(--gold); }
 
-        .btn-sentinel {
+        .btn-policyunboxed {
             padding: 0.75rem 1.75rem;
             background: transparent;
             border: 1px solid var(--slate-dim);
@@ -543,7 +543,7 @@
             align-self: flex-start;
         }
 
-        .btn-sentinel:hover { background: var(--slate); color: var(--text); border-color: var(--slate); }
+        .btn-policyunboxed:hover { background: var(--slate); color: var(--text); border-color: var(--slate); }
 
         /* Codex visual — SVG reference graph */
         .codex-visual-wrap {
@@ -556,8 +556,8 @@
             justify-content: center;
         }
 
-        /* Sentinel visual — live feed */
-        .sentinel-feed {
+        /* PolicyUnboxed visual — live feed */
+        .policyunboxed-feed {
             width: 100%;
             padding: 2.5rem 2rem;
             display: flex;
@@ -985,7 +985,7 @@
         </p>
         <div class="hero-actions">
             <a href="#codex" class="btn-gold">For Legislators</a>
-            <a href="#sentinel" class="btn-ghost">For Advocates &amp; Lobbyists</a>
+            <a href="#policyunboxed" class="btn-ghost">For Advocates &amp; Lobbyists</a>
         </div>
     </div>
 
@@ -1063,7 +1063,7 @@
                     <div class="p-step-num">03</div>
                     <div>
                         <div class="p-step-title">Product Layer</div>
-                        <div class="p-step-body">This structured knowledge powers two purpose-built products — Codex for legislative drafting intelligence, and Sentinel for precision bill monitoring.</div>
+                        <div class="p-step-body">This structured knowledge powers two purpose-built products — Codex for legislative drafting intelligence, and PolicyUnboxed for precision bill monitoring.</div>
                     </div>
                 </div>
             </div>
@@ -1173,15 +1173,15 @@
     </div>
 
     <!-- SENTINEL -->
-    <div class="product-block sentinel-block" id="sentinel">
+    <div class="product-block policyunboxed-block" id="policyunboxed">
         <div class="product-info">
             <div>
                 <span class="product-tag">For Advocates &amp; Lobbyists</span>
-                <h3 class="product-name">Sentinel</h3>
+                <h3 class="product-name">PolicyUnboxed</h3>
                 <p class="product-tagline">Precision bill monitoring with configurable filter rules</p>
                 <p class="product-desc">
                     Policy professionals need to stay current across hundreds of active bills
-                    without drowning in noise. Sentinel monitors legislative activity across all
+                    without drowning in noise. PolicyUnboxed monitors legislative activity across all
                     jurisdictions and delivers only what matches your rules — defined with
                     precision, not left to algorithmic guesswork.
                 </p>
@@ -1193,10 +1193,10 @@
                     <li>Team workspaces with shared rule sets, annotations, and history</li>
                 </ul>
             </div>
-            <a href="#pricing" class="btn-sentinel">View Sentinel Pricing</a>
+            <a href="#pricing" class="btn-policyunboxed">View PolicyUnboxed Pricing</a>
         </div>
         <div class="product-visual">
-            <div class="sentinel-feed">
+            <div class="policyunboxed-feed">
                 <div class="feed-item">
                     <div class="feed-dot live"></div>
                     <div class="feed-body">
@@ -1250,7 +1250,7 @@
 
         <div class="pricing-switcher reveal delay-2">
             <button class="p-tab active-gold" id="tab-codex">Codex — Legislators</button>
-            <button class="p-tab"             id="tab-sentinel">Sentinel — Advocates</button>
+            <button class="p-tab"             id="tab-policyunboxed">PolicyUnboxed — Advocates</button>
         </div>
 
         <!-- Codex Pricing -->
@@ -1305,9 +1305,9 @@
             </div>
         </div>
 
-        <!-- Sentinel Pricing -->
-        <div class="p-panel slate-panel" id="panel-sentinel">
-            <p class="p-note">Sentinel is priced per seat. Each seat includes full monitoring access, rule configuration, and team workspace features.</p>
+        <!-- PolicyUnboxed Pricing -->
+        <div class="p-panel slate-panel" id="panel-policyunboxed">
+            <p class="p-note">PolicyUnboxed is priced per seat. Each seat includes full monitoring access, rule configuration, and team workspace features.</p>
             <div class="price-grid">
                 <div class="price-card">
                     <div class="price-tier">Individual</div>
@@ -1408,7 +1408,7 @@
                     <select id="f-product" name="product">
                         <option value="">Select a product…</option>
                         <option value="codex">Codex — Legislative Drafting</option>
-                        <option value="sentinel">Sentinel — Bill Monitoring</option>
+                        <option value="policyunboxed">PolicyUnboxed — Bill Monitoring</option>
                         <option value="both">Both Products</option>
                         <option value="data">Data Licensing / Partnership</option>
                     </select>
@@ -1516,7 +1516,7 @@
 
     /* ── Pricing tabs ── */
     function showPanel(id) {
-        ['codex', 'sentinel'].forEach(key => {
+        ['codex', 'policyunboxed'].forEach(key => {
             document.getElementById('panel-' + key).classList.toggle('visible', key === id);
             const tab = document.getElementById('tab-' + key);
             tab.classList.remove('active-gold', 'active-slate');
@@ -1525,7 +1525,7 @@
     }
 
     document.getElementById('tab-codex').addEventListener('click',    () => showPanel('codex'));
-    document.getElementById('tab-sentinel').addEventListener('click',  () => showPanel('sentinel'));
+    document.getElementById('tab-policyunboxed').addEventListener('click',  () => showPanel('policyunboxed'));
 
     /* ── Contact form ── */
     document.getElementById('contact-form').addEventListener('submit', function (e) {
