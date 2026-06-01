@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akion - Policy Intelligence Infrastructure</title>
-    <meta name="description" content="Akion builds structured policy data infrastructure for legislators, activists, and lobbyists. Codex automates legislative reference tracking. PolicyUnboxed monitors bills with precision filter rules.">
+    <meta name="description" content="Akion builds structured policy data infrastructure for legislators, activists, and lobbyists. Waypoint automates legislative reference tracking. PolicyUnboxed monitors bills with precision filter rules.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
@@ -461,7 +461,7 @@
             align-self: flex-start;
         }
 
-        .codex-block .product-tag    { border-color: var(--gold-dim);  color: var(--gold); }
+        .waypoint-block .product-tag    { border-color: var(--gold-dim);  color: var(--gold); }
         .policyunboxed-block .product-tag { border-color: var(--slate-dim); color: var(--slate-light); }
 
         .product-name {
@@ -512,10 +512,10 @@
             margin-top: 0.18rem;
         }
 
-        .codex-block    .product-features li::before { color: var(--gold); }
+        .waypoint-block    .product-features li::before { color: var(--gold); }
         .policyunboxed-block .product-features li::before { color: var(--slate-light); }
 
-        .btn-codex {
+        .btn-waypoint {
             padding: 0.75rem 1.75rem;
             background: transparent;
             border: 1px solid var(--gold-dim);
@@ -528,7 +528,7 @@
             align-self: flex-start;
         }
 
-        .btn-codex:hover { background: var(--gold); color: #080600; border-color: var(--gold); }
+        .btn-waypoint:hover { background: var(--gold); color: #080600; border-color: var(--gold); }
 
         .btn-policyunboxed {
             padding: 0.75rem 1.75rem;
@@ -545,8 +545,8 @@
 
         .btn-policyunboxed:hover { background: var(--slate); color: var(--text); border-color: var(--slate); }
 
-        /* Codex visual — SVG reference graph */
-        .codex-visual-wrap {
+        /* Waypoint visual — SVG reference graph */
+        .waypoint-visual-wrap {
             width: 100%;
             height: 100%;
             padding: 2.5rem;
@@ -984,7 +984,7 @@
             to monitor with confidence.
         </p>
         <div class="hero-actions">
-            <a href="#codex" class="btn-gold">For Legislators</a>
+            <a href="#waypoint" class="btn-gold">For Legislators</a>
             <a href="#policyunboxed" class="btn-ghost">For Advocates &amp; Lobbyists</a>
         </div>
     </div>
@@ -1063,7 +1063,7 @@
                     <div class="p-step-num">03</div>
                     <div>
                         <div class="p-step-title">Product Layer</div>
-                        <div class="p-step-body">This structured knowledge powers two purpose-built products — Codex for legislative drafting intelligence, and PolicyUnboxed for precision bill monitoring.</div>
+                        <div class="p-step-body">This structured knowledge powers two purpose-built products — Waypoint for legislative drafting intelligence, and PolicyUnboxed for precision bill monitoring.</div>
                     </div>
                 </div>
             </div>
@@ -1086,16 +1086,16 @@
         </div>
     </div>
 
-    <!-- CODEX -->
-    <div class="product-block codex-block" id="codex">
+    <!-- WAYPOINT -->
+    <div class="product-block waypoint-block" id="waypoint">
         <div class="product-info">
             <div>
                 <span class="product-tag">For Legislators &amp; Drafters</span>
-                <h3 class="product-name">Codex</h3>
+                <h3 class="product-name">Waypoint</h3>
                 <p class="product-tagline">Automated reference intelligence for legislative drafting</p>
                 <p class="product-desc">
                     When drafting or reviewing legislation, assembling every relevant reference,
-                    precedent, and statutory conflict requires significant manual effort. Codex
+                    precedent, and statutory conflict requires significant manual effort. Waypoint
                     eliminates that burden — surfacing the complete reference picture automatically
                     so legislators can focus on applying their judgment, not finding documents.
                 </p>
@@ -1107,10 +1107,10 @@
                     <li>Collaborative drafting environment with version control</li>
                 </ul>
             </div>
-            <a href="#pricing" class="btn-codex">View Codex Pricing</a>
+            <a href="#pricing" class="btn-waypoint">View Waypoint Pricing</a>
         </div>
         <div class="product-visual">
-            <div class="codex-visual-wrap">
+            <div class="waypoint-visual-wrap">
                 <svg width="100%" height="300" viewBox="0 0 380 300" style="max-width: 380px;">
                     <!-- Primary bill node -->
                     <rect x="130" y="20" width="120" height="54" fill="rgba(196,160,68,0.1)" stroke="rgba(196,160,68,0.45)" stroke-width="1"/>
@@ -1249,13 +1249,13 @@
         <h2 class="section-title reveal delay-1">Transparent pricing.<br>Serious infrastructure.</h2>
 
         <div class="pricing-switcher reveal delay-2">
-            <button class="p-tab active-gold" id="tab-codex">Codex — Legislators</button>
+            <button class="p-tab active-gold" id="tab-waypoint">Waypoint — Legislators</button>
             <button class="p-tab"             id="tab-policyunboxed">PolicyUnboxed — Advocates</button>
         </div>
 
-        <!-- Codex Pricing -->
-        <div class="p-panel gold-panel visible" id="panel-codex">
-            <p class="p-note">Codex is priced by document volume — the number of bills and referenced statutes processed per month.</p>
+        <!-- Waypoint Pricing -->
+        <div class="p-panel gold-panel visible" id="panel-waypoint">
+            <p class="p-note">Waypoint is priced by document volume — the number of bills and referenced statutes processed per month.</p>
             <div class="price-grid">
                 <div class="price-card">
                     <div class="price-tier">Starter</div>
@@ -1407,7 +1407,7 @@
                     <label for="f-product">Product Interest</label>
                     <select id="f-product" name="product">
                         <option value="">Select a product…</option>
-                        <option value="codex">Codex — Legislative Drafting</option>
+                        <option value="waypoint">Waypoint — Legislative Drafting</option>
                         <option value="policyunboxed">PolicyUnboxed — Bill Monitoring</option>
                         <option value="both">Both Products</option>
                         <option value="data">Data Licensing / Partnership</option>
@@ -1516,15 +1516,15 @@
 
     /* ── Pricing tabs ── */
     function showPanel(id) {
-        ['codex', 'policyunboxed'].forEach(key => {
+        ['waypoint', 'policyunboxed'].forEach(key => {
             document.getElementById('panel-' + key).classList.toggle('visible', key === id);
             const tab = document.getElementById('tab-' + key);
             tab.classList.remove('active-gold', 'active-slate');
-            if (key === id) tab.classList.add(key === 'codex' ? 'active-gold' : 'active-slate');
+            if (key === id) tab.classList.add(key === 'waypoint' ? 'active-gold' : 'active-slate');
         });
     }
 
-    document.getElementById('tab-codex').addEventListener('click',    () => showPanel('codex'));
+    document.getElementById('tab-waypoint').addEventListener('click',    () => showPanel('waypoint'));
     document.getElementById('tab-policyunboxed').addEventListener('click',  () => showPanel('policyunboxed'));
 
     /* ── Contact form ── */
