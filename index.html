@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akion - Policy Intelligence Infrastructure</title>
-    <meta name="description" content="Akion builds structured policy data infrastructure for legislators, activists, and lobbyists. Waypoint automates legislative reference tracking. PolicyUnboxed monitors bills with precision filter rules.">
+    <title>Akion Sentinel - Your Legislative and Regulatory Assistant</title>
+    <meta name="description" content="Sentinel by Akion is a full-time legislative and regulatory assistant for contract lobbyists. It watches Congress, the Federal Register, state legislatures, and local boards for every client, and tells you what changed and why it matters.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
@@ -443,8 +443,8 @@
             justify-content: center;
         }
 
-        /* PolicyUnboxed reverses the visual to the left */
-        .policyunboxed-block .product-visual {
+        /* Sentinel reverses the visual to the left */
+        .sentinel-block .product-visual {
             border-left: none;
             border-right: 1px solid var(--border);
             order: -1;
@@ -461,8 +461,7 @@
             align-self: flex-start;
         }
 
-        .waypoint-block .product-tag    { border-color: var(--gold-dim);  color: var(--gold); }
-        .policyunboxed-block .product-tag { border-color: var(--slate-dim); color: var(--slate-light); }
+        .sentinel-block .product-tag { border-color: var(--slate-dim); color: var(--slate-light); }
 
         .product-name {
             font-family: 'Cormorant Garamond', serif;
@@ -512,25 +511,9 @@
             margin-top: 0.18rem;
         }
 
-        .waypoint-block    .product-features li::before { color: var(--gold); }
-        .policyunboxed-block .product-features li::before { color: var(--slate-light); }
+        .sentinel-block .product-features li::before { color: var(--slate-light); }
 
-        .btn-waypoint {
-            padding: 0.75rem 1.75rem;
-            background: transparent;
-            border: 1px solid var(--gold-dim);
-            color: var(--gold);
-            font-size: 0.73rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: background 0.2s, color 0.2s, border-color 0.2s;
-            align-self: flex-start;
-        }
-
-        .btn-waypoint:hover { background: var(--gold); color: #080600; border-color: var(--gold); }
-
-        .btn-policyunboxed {
+        .btn-sentinel {
             padding: 0.75rem 1.75rem;
             background: transparent;
             border: 1px solid var(--slate-dim);
@@ -543,21 +526,10 @@
             align-self: flex-start;
         }
 
-        .btn-policyunboxed:hover { background: var(--slate); color: var(--text); border-color: var(--slate); }
+        .btn-sentinel:hover { background: var(--slate); color: var(--text); border-color: var(--slate); }
 
-        /* Waypoint visual — SVG reference graph */
-        .waypoint-visual-wrap {
-            width: 100%;
-            height: 100%;
-            padding: 2.5rem;
-            background: linear-gradient(135deg, rgba(196,160,68,0.04) 0%, transparent 70%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* PolicyUnboxed visual — live feed */
-        .policyunboxed-feed {
+        /* Sentinel visual — live feed */
+        .sentinel-feed {
             width: 100%;
             padding: 2.5rem 2rem;
             display: flex;
@@ -629,38 +601,48 @@
             opacity: 0.7;
         }
 
+        /* Capability grid */
+        .cap-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            border-top: none;
+        }
+
+        .cap-card {
+            background: var(--bg-card);
+            padding: 2.5rem;
+        }
+
+        .cap-kicker {
+            font-size: 0.62rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--slate-light);
+            margin-bottom: 0.9rem;
+        }
+
+        .cap-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.15;
+            margin-bottom: 0.75rem;
+        }
+
+        .cap-body {
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
+
         /* ── PRICING ── */
         .pricing {
             background: var(--bg-surface);
             border-top: 1px solid var(--border);
         }
-
-        .pricing-switcher {
-            display: inline-flex;
-            border: 1px solid var(--border);
-            margin-top: 2rem;
-            margin-bottom: 3.5rem;
-        }
-
-        .p-tab {
-            padding: 0.6rem 1.6rem;
-            font-size: 0.72rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            cursor: pointer;
-            border: none;
-            background: transparent;
-            color: var(--text-dim);
-            transition: all 0.2s;
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 300;
-        }
-
-        .p-tab.active-gold   { background: var(--gold);  color: #080600; }
-        .p-tab.active-slate  { background: var(--slate); color: var(--text); }
-
-        .p-panel { display: none; }
-        .p-panel.visible { display: block; }
 
         .p-note {
             font-size: 0.83rem;
@@ -685,7 +667,6 @@
             position: relative;
         }
 
-        .price-card.featured-gold  { background: rgba(196,160,68, 0.05); }
         .price-card.featured-slate { background: rgba(74, 111,165, 0.07); }
 
         .featured-tag {
@@ -697,7 +678,6 @@
             padding: 0.28rem 0.75rem;
         }
 
-        .featured-tag.gold  { background: var(--gold);  color: #080600; }
         .featured-tag.slate { background: var(--slate); color: var(--text); }
 
         .price-tier {
@@ -753,7 +733,6 @@
             flex-shrink: 0;
         }
 
-        .gold-panel  .price-features li::before { color: var(--gold); }
         .slate-panel .price-features li::before { color: var(--slate-light); }
 
         .price-btn {
@@ -771,8 +750,6 @@
 
         .price-btn:hover { border-color: var(--text-muted); color: var(--text); }
 
-        .price-card.featured-gold  .price-btn { border-color: var(--gold-dim);  color: var(--gold); }
-        .price-card.featured-gold  .price-btn:hover { background: var(--gold); color: #080600; }
         .price-card.featured-slate .price-btn { border-color: var(--slate-dim); color: var(--slate-light); }
         .price-card.featured-slate .price-btn:hover { background: var(--slate); color: var(--text); }
 
@@ -934,6 +911,7 @@
             .product-block { grid-template-columns: 1fr; }
             .product-info { padding: 2.5rem; }
             .product-visual { border-left: none !important; border-right: none !important; border-top: 1px solid var(--border); order: 1 !important; min-height: 260px; }
+            .cap-grid { grid-template-columns: 1fr; }
 
             .price-grid { grid-template-columns: 1fr; }
 
@@ -960,11 +938,11 @@
     </a>
     <ul class="nav-links">
         <li><a href="#platform">Platform</a></li>
-        <li><a href="#products">Products</a></li>
+        <li><a href="#products">Sentinel</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="#contact" class="nav-cta">Request Access</a>
+    <a href="#contact" class="nav-cta">Request a Demo</a>
 </nav>
 
 <!-- ══════════════ HERO ══════════════ -->
@@ -973,19 +951,19 @@
     <canvas id="hero-canvas"></canvas>
 
     <div class="hero-content">
-        <div class="eyebrow">Policy Intelligence Infrastructure</div>
+        <div class="eyebrow">Sentinel by Akion</div>
         <h1 class="hero-title">
-            Legislative knowledge,<br>
-            <em>structured for action.</em>
+            Your full-time legislative<br>
+            <em>and regulatory assistant.</em>
         </h1>
         <p class="hero-subtitle">
-            Akion builds the structured data layer beneath policy —
-            enabling legislators to draft with precision, and advocates
-            to monitor with confidence.
+            Sentinel watches Congress, the Federal Register, state legislatures,
+            and local town boards for every client you represent — then tells you
+            what changed, why it matters to them, and what to do next.
         </p>
         <div class="hero-actions">
-            <a href="#waypoint" class="btn-gold">For Legislators</a>
-            <a href="#policyunboxed" class="btn-ghost">For Advocates &amp; Lobbyists</a>
+            <a href="#sentinel" class="btn-gold">See How It Works</a>
+            <a href="#contact" class="btn-ghost">Request a Demo</a>
         </div>
     </div>
 
@@ -997,49 +975,49 @@
         <div class="section-label reveal">The data foundation</div>
         <h2 class="section-title reveal delay-1">Policy knowledge,<br>structured for machines.</h2>
         <p class="section-lead reveal delay-2">
-            Legislation is dense, cross-referenced, and spread across dozens of
-            jurisdictions. Akion parses it into a unified, queryable data layer —
-            the infrastructure our products are built on.
+            Bills, regulations, hearings, and local ordinances are scattered across
+            every level of government. Akion parses them into a unified, versioned
+            data layer — the infrastructure Sentinel is built on.
         </p>
 
         <div class="platform-grid" style="margin-top: 4rem;">
             <div class="reveal delay-1">
                 <div class="data-matrix">
                     <div class="dm-cell">
-                        <div class="dm-label">Bill ID</div>
-                        <div class="dm-value">HB 2204 §3(a)</div>
-                    </div>
-                    <div class="dm-cell hi">
-                        <div class="dm-label">References</div>
-                        <div class="dm-value">26 USC §501(c)(3)</div>
-                    </div>
-                    <div class="dm-cell">
-                        <div class="dm-label">Status</div>
-                        <div class="dm-value">Committee Review</div>
+                        <div class="dm-label">Bill</div>
+                        <div class="dm-value">S.7197-B</div>
                     </div>
                     <div class="dm-cell">
                         <div class="dm-label">Jurisdiction</div>
-                        <div class="dm-value">Federal</div>
+                        <div class="dm-value">New York</div>
                     </div>
                     <div class="dm-cell">
-                        <div class="dm-label">Amended by</div>
-                        <div class="dm-value">SB 1189 §7</div>
+                        <div class="dm-label">Status</div>
+                        <div class="dm-value">In Senate Committee</div>
+                    </div>
+                    <div class="dm-cell">
+                        <div class="dm-label">Version</div>
+                        <div class="dm-value">B · Feb 11, 2026</div>
                     </div>
                     <div class="dm-cell hi">
-                        <div class="dm-label">Impact</div>
-                        <div class="dm-value">14 USC sections</div>
+                        <div class="dm-label">What changed</div>
+                        <div class="dm-value">5 MW → 3 MW threshold</div>
+                    </div>
+                    <div class="dm-cell">
+                        <div class="dm-label">Heard in</div>
+                        <div class="dm-value">Budget hearing · 1:07</div>
                     </div>
                     <div class="dm-cell hi-slate">
-                        <div class="dm-label">Conflicts</div>
-                        <div class="dm-value">3 identified</div>
+                        <div class="dm-label">Client</div>
+                        <div class="dm-value">Marrowfield Energy</div>
+                    </div>
+                    <div class="dm-cell hi-slate">
+                        <div class="dm-label">Projects affected</div>
+                        <div class="dm-value">3 storage sites</div>
                     </div>
                     <div class="dm-cell">
-                        <div class="dm-label">Session</div>
-                        <div class="dm-value">119th Congress</div>
-                    </div>
-                    <div class="dm-cell">
-                        <div class="dm-label">Filed</div>
-                        <div class="dm-value">Mar 14, 2026</div>
+                        <div class="dm-label">Next step</div>
+                        <div class="dm-value">Draft client note</div>
                     </div>
                 </div>
             </div>
@@ -1048,22 +1026,22 @@
                 <div class="p-step reveal">
                     <div class="p-step-num">01</div>
                     <div>
-                        <div class="p-step-title">Ingest &amp; Parse</div>
-                        <div class="p-step-body">We continuously ingest legislative documents from federal and state sources — bills, regulations, and statutory code — parsing them into structured data with full provenance tracking.</div>
+                        <div class="p-step-title">Watch Every Level</div>
+                        <div class="p-step-body">We continuously ingest Congress, the Federal Register, state legislatures, and county and town boards — and transcribe public hearing recordings so what's said on the record is searchable too.</div>
                     </div>
                 </div>
                 <div class="p-step reveal delay-1">
                     <div class="p-step-num">02</div>
                     <div>
-                        <div class="p-step-title">Reference Mapping</div>
-                        <div class="p-step-body">Every citation, cross-reference, and amendment is resolved and mapped. The result is a comprehensive graph of how legislation is interconnected across time and jurisdiction.</div>
+                        <div class="p-step-title">Track Every Version</div>
+                        <div class="p-step-body">Every amendment and regulatory revision is versioned and compared, so a change from "five" to "three" megawatts never slips past unnoticed.</div>
                     </div>
                 </div>
                 <div class="p-step reveal delay-2">
                     <div class="p-step-num">03</div>
                     <div>
-                        <div class="p-step-title">Product Layer</div>
-                        <div class="p-step-body">This structured knowledge powers two purpose-built products — Waypoint for legislative drafting intelligence, and PolicyUnboxed for precision bill monitoring.</div>
+                        <div class="p-step-title">Read It Through Your Clients</div>
+                        <div class="p-step-body">Each change is matched against your clients' issues and projects, then explained in terms of what it means for them — not just that something moved.</div>
                     </div>
                 </div>
             </div>
@@ -1071,173 +1049,116 @@
     </div>
 </section>
 
-<!-- ══════════════ PRODUCTS ══════════════ -->
+<!-- ══════════════ SENTINEL ══════════════ -->
 <section id="products" style="padding-bottom: 0;">
     <div class="section-inner">
         <div class="products-header">
             <div>
-                <div class="section-label reveal">Products</div>
-                <h2 class="section-title reveal delay-1">Two products.<br>One data foundation.</h2>
+                <div class="section-label reveal">Sentinel</div>
+                <h2 class="section-title reveal delay-1">Every client. Every change.<br>Every level of government.</h2>
             </div>
             <p class="section-lead reveal delay-2">
-                Built for the distinct workflows of those who write the law
-                and those who watch it — with the same infrastructure underneath.
+                Built for contract lobbyists carrying a full book of clients —
+                so nothing that matters to any of them moves without you knowing.
             </p>
         </div>
     </div>
 
-    <!-- WAYPOINT -->
-    <div class="product-block waypoint-block" id="waypoint">
+    <div class="product-block sentinel-block" id="sentinel">
         <div class="product-info">
             <div>
-                <span class="product-tag">For Legislators &amp; Drafters</span>
-                <h3 class="product-name">Waypoint</h3>
-                <p class="product-tagline">Automated reference intelligence for legislative drafting</p>
+                <span class="product-tag">For Contract Lobbyists</span>
+                <h3 class="product-name">Sentinel</h3>
+                <p class="product-tagline">Tell it about your client. It watches everything that touches them.</p>
                 <p class="product-desc">
-                    When drafting or reviewing legislation, assembling every relevant reference,
-                    precedent, and statutory conflict requires significant manual effort. Waypoint
-                    eliminates that burden — surfacing the complete reference picture automatically
-                    so legislators can focus on applying their judgment, not finding documents.
+                    Describe each client in plain language — their issues, their projects,
+                    where they operate. Sentinel works out what to watch across federal,
+                    state, and local sources, and messages you when anything moves, with
+                    the impact on that client already worked out.
                 </p>
                 <ul class="product-features">
-                    <li>Automated tracking of every statutory reference within a bill</li>
-                    <li>Conflict detection against existing law and pending legislation</li>
-                    <li>Side-by-side amendment comparison with full change history</li>
-                    <li>Complete citation resolution with source document retrieval</li>
-                    <li>Collaborative drafting environment with version control</li>
+                    <li>Federal, state, and local coverage — down to county and town boards</li>
+                    <li>Every bill version redlined, with impact traced to specific client projects</li>
+                    <li>Public hearings transcribed, with the relevant moment quoted and timestamped</li>
+                    <li>Ask Sentinel anything about a bill — answers cite the text</li>
+                    <li>Alerts in Slack, with one-click client notes, emails, and talking points</li>
                 </ul>
             </div>
-            <a href="#pricing" class="btn-waypoint">View Waypoint Pricing</a>
+            <a href="#pricing" class="btn-sentinel">View Pricing</a>
         </div>
         <div class="product-visual">
-            <div class="waypoint-visual-wrap">
-                <svg width="100%" height="300" viewBox="0 0 380 300" style="max-width: 380px;">
-                    <!-- Primary bill node -->
-                    <rect x="130" y="20" width="120" height="54" fill="rgba(196,160,68,0.1)" stroke="rgba(196,160,68,0.45)" stroke-width="1"/>
-                    <text x="190" y="43" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7.5" fill="rgba(196,160,68,0.6)" letter-spacing="1.5">BILL</text>
-                    <text x="190" y="61" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="15" fill="#C4A044">HB 2204</text>
-
-                    <!-- Reference nodes -->
-                    <rect x="10" y="130" width="105" height="42" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-                    <text x="62" y="147" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7" fill="#52506A" letter-spacing="1">REFERENCE</text>
-                    <text x="62" y="163" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="12" fill="#8A8698">26 USC §501</text>
-
-                    <rect x="137" y="130" width="106" height="42" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-                    <text x="190" y="147" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7" fill="#52506A" letter-spacing="1">AMENDMENT</text>
-                    <text x="190" y="163" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="12" fill="#8A8698">SB 1189 §7</text>
-
-                    <rect x="265" y="130" width="105" height="42" fill="rgba(122,58,58,0.08)" stroke="rgba(139,58,58,0.3)" stroke-width="1"/>
-                    <text x="317" y="147" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7" fill="#7A4040" letter-spacing="1">CONFLICT</text>
-                    <text x="317" y="163" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="12" fill="#A07070">CFR 26 §1.501</text>
-
-                    <!-- Depth nodes -->
-                    <rect x="10" y="225" width="105" height="36" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-                    <text x="62" y="247" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="11" fill="#52506A">IRC §4958</text>
-
-                    <rect x="137" y="225" width="106" height="36" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-                    <text x="190" y="247" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="11" fill="#52506A">HB 2201 §4</text>
-
-                    <!-- Connection lines -->
-                    <line x1="190" y1="74" x2="62"  y2="130" stroke="rgba(196,160,68,0.2)"  stroke-width="1" stroke-dasharray="4,3"/>
-                    <line x1="190" y1="74" x2="190" y2="130" stroke="rgba(196,160,68,0.35)" stroke-width="1"/>
-                    <line x1="190" y1="74" x2="317" y2="130" stroke="rgba(139,58,58,0.25)"  stroke-width="1" stroke-dasharray="3,4"/>
-                    <line x1="62"  y1="172" x2="62"  y2="225" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="3,3"/>
-                    <line x1="190" y1="172" x2="190" y2="225" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="3,3"/>
-
-                    <!-- Animated traversal dot — gold -->
-                    <circle r="3" fill="rgba(196,160,68,0.75)">
-                        <animateMotion dur="3s" repeatCount="indefinite" begin="0s">
-                            <mpath href="#path-ref"/>
-                        </animateMotion>
-                    </circle>
-                    <path id="path-ref" d="M190,74 L62,130" fill="none"/>
-
-                    <!-- Animated traversal dot — conflict -->
-                    <circle r="2.5" fill="rgba(180,80,80,0.7)">
-                        <animateMotion dur="2.4s" repeatCount="indefinite" begin="1s">
-                            <mpath href="#path-conflict"/>
-                        </animateMotion>
-                    </circle>
-                    <path id="path-conflict" d="M190,74 L317,130" fill="none"/>
-
-                    <!-- Animated traversal dot — amendment -->
-                    <circle r="2.5" fill="rgba(196,160,68,0.5)">
-                        <animateMotion dur="2.8s" repeatCount="indefinite" begin="1.6s">
-                            <mpath href="#path-amend"/>
-                        </animateMotion>
-                    </circle>
-                    <path id="path-amend" d="M190,74 L190,130" fill="none"/>
-                </svg>
+            <div class="sentinel-feed">
+                <div class="feed-item">
+                    <div class="feed-dot live"></div>
+                    <div class="feed-body">
+                        <div class="feed-bill">S.7197-B — Battery storage setbacks</div>
+                        <div class="feed-status">New amendment · Now reaches all three client storage sites</div>
+                        <div class="feed-rule">Client: Marrowfield Energy · New York</div>
+                    </div>
+                </div>
+                <div class="feed-item">
+                    <div class="feed-dot live"></div>
+                    <div class="feed-body">
+                        <div class="feed-bill">Budget hearing — Environmental Conservation / Energy</div>
+                        <div class="feed-status">Storage siting raised on the record · Quoted at 1:07</div>
+                        <div class="feed-rule">Client: Marrowfield Energy · New York</div>
+                    </div>
+                </div>
+                <div class="feed-item">
+                    <div class="feed-dot"></div>
+                    <div class="feed-body">
+                        <div class="feed-bill">Town of Lockport — Town Board public hearing</div>
+                        <div class="feed-status">Proposed 18-month moratorium on utility-scale storage</div>
+                        <div class="feed-rule">Client: Marrowfield Energy · Local</div>
+                    </div>
+                </div>
+                <div class="feed-item">
+                    <div class="feed-dot"></div>
+                    <div class="feed-body">
+                        <div class="feed-bill">30 CFR 585.516 — Lease financial assurance</div>
+                        <div class="feed-status">Amended after client manual took effect · §4.2 flagged</div>
+                        <div class="feed-rule">Compliance check · Federal</div>
+                    </div>
+                </div>
+                <div class="feed-item">
+                    <div class="feed-dot live"></div>
+                    <div class="feed-body">
+                        <div class="feed-bill">S. 5378 — Outer Continental Shelf Lease Restoration Act</div>
+                        <div class="feed-status">Referred to Energy and Natural Resources</div>
+                        <div class="feed-rule">Client: Marrowfield Energy · Federal</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- SENTINEL -->
-    <div class="product-block policyunboxed-block" id="policyunboxed">
-        <div class="product-info">
-            <div>
-                <span class="product-tag">For Advocates &amp; Lobbyists</span>
-                <h3 class="product-name">PolicyUnboxed</h3>
-                <p class="product-tagline">Precision bill monitoring with configurable filter rules</p>
-                <p class="product-desc">
-                    Policy professionals need to stay current across hundreds of active bills
-                    without drowning in noise. PolicyUnboxed monitors legislative activity across all
-                    jurisdictions and delivers only what matches your rules — defined with
-                    precision, not left to algorithmic guesswork.
-                </p>
-                <ul class="product-features">
-                    <li>Rule-based monitoring across federal and all 50 state legislatures</li>
-                    <li>Filter by topic, sponsor, committee, jurisdiction, status, or keyword</li>
-                    <li>Real-time alerts on bill status changes, new filings, and amendments</li>
-                    <li>Digest and briefing report generation for stakeholder communications</li>
-                    <li>Team workspaces with shared rule sets, annotations, and history</li>
-                </ul>
-            </div>
-            <a href="#pricing" class="btn-policyunboxed">View PolicyUnboxed Pricing</a>
+    <div class="cap-grid">
+        <div class="cap-card reveal">
+            <div class="cap-kicker">Heard in a hearing</div>
+            <h4 class="cap-title">Know what was said, not just what was filed.</h4>
+            <p class="cap-body">
+                Sentinel transcribes public hearing recordings and pulls out the
+                moments that matter to your clients — quoted, attributed, and linked
+                to the exact timestamp so you can watch it yourself.
+            </p>
         </div>
-        <div class="product-visual">
-            <div class="policyunboxed-feed">
-                <div class="feed-item">
-                    <div class="feed-dot live"></div>
-                    <div class="feed-body">
-                        <div class="feed-bill">SB 442 — Education Finance Reform Act</div>
-                        <div class="feed-status">Passed committee · Floor vote scheduled</div>
-                        <div class="feed-rule">Rule match: "education funding"</div>
-                    </div>
-                </div>
-                <div class="feed-item">
-                    <div class="feed-dot"></div>
-                    <div class="feed-body">
-                        <div class="feed-bill">HB 1897 — Environmental Standards Update</div>
-                        <div class="feed-status">New amendment filed · Section 4 revised</div>
-                        <div class="feed-rule">Rule match: "EPA standards, emissions"</div>
-                    </div>
-                </div>
-                <div class="feed-item">
-                    <div class="feed-dot live"></div>
-                    <div class="feed-body">
-                        <div class="feed-bill">SJR 14 — Infrastructure Bond Authorization</div>
-                        <div class="feed-status">Introduced · Referred to Finance Committee</div>
-                        <div class="feed-rule">Rule match: "infrastructure, bond issuance"</div>
-                    </div>
-                </div>
-                <div class="feed-item">
-                    <div class="feed-dot"></div>
-                    <div class="feed-body">
-                        <div class="feed-bill">AB 308 — Data Privacy Enforcement Act</div>
-                        <div class="feed-status">Signed by Governor · Effective in 90 days</div>
-                        <div class="feed-rule">Rule match: "data privacy, enforcement"</div>
-                    </div>
-                </div>
-                <div class="feed-item">
-                    <div class="feed-dot live"></div>
-                    <div class="feed-body">
-                        <div class="feed-bill">HB 2310 — Healthcare Cost Transparency</div>
-                        <div class="feed-status">Committee hearing scheduled: Jun 3</div>
-                        <div class="feed-rule">Rule match: "healthcare, price transparency"</div>
-                    </div>
-                </div>
-            </div>
+        <div class="cap-card reveal delay-1">
+            <div class="cap-kicker">Compliance check</div>
+            <h4 class="cap-title">Is this document still current?</h4>
+            <p class="cap-body">
+                Drop in a client's policy or compliance manual. Sentinel checks every
+                regulation it cites against the current Code of Federal Regulations,
+                shows what changed, and suggests a revision.
+            </p>
+        </div>
+        <div class="cap-card reveal delay-2">
+            <div class="cap-kicker">Ready to act</div>
+            <h4 class="cap-title">From alert to client note in one click.</h4>
+            <p class="cap-body">
+                Every update arrives in Slack with what changed and why it matters.
+                Draft a client note or email, generate talking points, or request a
+                sponsor meeting without leaving the thread.
+            </p>
         </div>
     </div>
 </section>
@@ -1248,66 +1169,9 @@
         <div class="section-label reveal">Pricing</div>
         <h2 class="section-title reveal delay-1">Transparent pricing.<br>Serious infrastructure.</h2>
 
-        <div class="pricing-switcher reveal delay-2">
-            <button class="p-tab active-gold" id="tab-waypoint">Waypoint — Legislators</button>
-            <button class="p-tab"             id="tab-policyunboxed">PolicyUnboxed — Advocates</button>
-        </div>
-
-        <!-- Waypoint Pricing -->
-        <div class="p-panel gold-panel visible" id="panel-waypoint">
-            <p class="p-note">Waypoint is priced by document volume — the number of bills and referenced statutes processed per month.</p>
-            <div class="price-grid">
-                <div class="price-card">
-                    <div class="price-tier">Starter</div>
-                    <div class="price-amount">[TBD]</div>
-                    <div class="price-sub">Up to 50 documents / month</div>
-                    <div class="price-hr"></div>
-                    <ul class="price-features">
-                        <li>Automated reference tracking</li>
-                        <li>Conflict detection</li>
-                        <li>Up to 3 active drafts</li>
-                        <li>Citation resolution</li>
-                        <li>Email support</li>
-                    </ul>
-                    <a href="#contact" class="price-btn">Contact for Pricing</a>
-                </div>
-                <div class="price-card featured-gold">
-                    <span class="featured-tag gold">Most Popular</span>
-                    <div class="price-tier">Professional</div>
-                    <div class="price-amount">[TBD]</div>
-                    <div class="price-sub">Up to 500 documents / month</div>
-                    <div class="price-hr"></div>
-                    <ul class="price-features">
-                        <li>Everything in Starter</li>
-                        <li>Unlimited active drafts</li>
-                        <li>Amendment comparison</li>
-                        <li>Cross-jurisdiction references</li>
-                        <li>Collaborative drafting — 5 seats</li>
-                        <li>Priority support</li>
-                    </ul>
-                    <a href="#contact" class="price-btn">Contact for Pricing</a>
-                </div>
-                <div class="price-card">
-                    <div class="price-tier">Enterprise</div>
-                    <div class="price-amount">Custom</div>
-                    <div class="price-sub">Unlimited documents</div>
-                    <div class="price-hr"></div>
-                    <ul class="price-features">
-                        <li>Everything in Professional</li>
-                        <li>Unlimited collaborative seats</li>
-                        <li>Custom data integrations</li>
-                        <li>Dedicated deployment option</li>
-                        <li>SLA &amp; compliance support</li>
-                        <li>Dedicated account manager</li>
-                    </ul>
-                    <a href="#contact" class="price-btn">Contact Sales</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- PolicyUnboxed Pricing -->
-        <div class="p-panel slate-panel" id="panel-policyunboxed">
-            <p class="p-note">PolicyUnboxed is priced per seat. Each seat includes full monitoring access, rule configuration, and team workspace features.</p>
+        <!-- Sentinel Pricing -->
+        <div class="slate-panel reveal delay-2" id="panel-sentinel" style="margin-top: 2.5rem;">
+            <p class="p-note">Sentinel is priced per seat. Each seat includes federal, state, and local coverage, unlimited clients, and Slack delivery.</p>
             <div class="price-grid">
                 <div class="price-card">
                     <div class="price-tier">Individual</div>
@@ -1315,10 +1179,10 @@
                     <div class="price-sub">Per seat · billed monthly</div>
                     <div class="price-hr"></div>
                     <ul class="price-features">
-                        <li>Unlimited monitoring rules</li>
-                        <li>Federal + all 50 states</li>
-                        <li>Real-time alerts</li>
-                        <li>Weekly digest reports</li>
+                        <li>Unlimited clients</li>
+                        <li>Federal, state &amp; local coverage</li>
+                        <li>Version redlines &amp; hearing transcripts</li>
+                        <li>Slack alerts</li>
                         <li>Standard support</li>
                     </ul>
                     <a href="#contact" class="price-btn">Contact for Pricing</a>
@@ -1331,9 +1195,9 @@
                     <div class="price-hr"></div>
                     <ul class="price-features">
                         <li>Everything in Individual</li>
-                        <li>Shared rule sets &amp; workspaces</li>
-                        <li>Team annotations</li>
-                        <li>Stakeholder report templates</li>
+                        <li>Shared client workspaces</li>
+                        <li>Compliance checks on client documents</li>
+                        <li>Client note, email &amp; talking-point drafts</li>
                         <li>Admin dashboard</li>
                         <li>Priority support</li>
                     </ul>
@@ -1396,26 +1260,25 @@
                     </div>
                     <div class="fg">
                         <label for="f-org">Organization</label>
-                        <input type="text" id="f-org" name="org" placeholder="Office or organization">
+                        <input type="text" id="f-org" name="org" placeholder="Firm or organization">
                     </div>
                 </div>
                 <div class="fg">
                     <label for="f-email">Email Address</label>
-                    <input type="email" id="f-email" name="email" required placeholder="you@organization.gov">
+                    <input type="email" id="f-email" name="email" required placeholder="you@firm.com">
                 </div>
                 <div class="fg">
                     <label for="f-product">Product Interest</label>
                     <select id="f-product" name="product">
                         <option value="">Select a product…</option>
-                        <option value="waypoint">Waypoint — Legislative Drafting</option>
-                        <option value="policyunboxed">PolicyUnboxed — Bill Monitoring</option>
-                        <option value="both">Both Products</option>
+                        <option value="demo">Sentinel — Book a Demo</option>
+                        <option value="sentinel">Sentinel — Pricing</option>
                         <option value="data">Data Licensing / Partnership</option>
                     </select>
                 </div>
                 <div class="fg">
                     <label for="f-msg">Message</label>
-                    <textarea id="f-msg" name="message" placeholder="Tell us about your use case…"></textarea>
+                    <textarea id="f-msg" name="message" placeholder="Tell us about your practice and clients…"></textarea>
                 </div>
                 <button type="submit" class="form-submit" id="form-btn">Send Inquiry</button>
             </form>
@@ -1513,19 +1376,6 @@
         }, { threshold: 0.12 });
         els.forEach(el => io.observe(el));
     }());
-
-    /* ── Pricing tabs ── */
-    function showPanel(id) {
-        ['waypoint', 'policyunboxed'].forEach(key => {
-            document.getElementById('panel-' + key).classList.toggle('visible', key === id);
-            const tab = document.getElementById('tab-' + key);
-            tab.classList.remove('active-gold', 'active-slate');
-            if (key === id) tab.classList.add(key === 'waypoint' ? 'active-gold' : 'active-slate');
-        });
-    }
-
-    document.getElementById('tab-waypoint').addEventListener('click',    () => showPanel('waypoint'));
-    document.getElementById('tab-policyunboxed').addEventListener('click',  () => showPanel('policyunboxed'));
 
     /* ── Contact form ── */
     document.getElementById('contact-form').addEventListener('submit', function (e) {
